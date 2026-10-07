@@ -11,3 +11,4 @@ Features:
 8. Manage Student Records
 Student Login feature completed
 View Attendance feature completed
+View Exam Results feature completed
