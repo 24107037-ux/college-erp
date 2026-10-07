@@ -1,0 +1,49 @@
+name: College ERP CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          echo "=== BUILD STARTED ==="
+          test -f app.txt
+          echo "Build completed successfully."
+
+      - name: Test
+        run: |
+          echo "=== TEST STARTED ==="
+          grep -q "Student Login" app.txt
+          grep -q "View Attendance" app.txt
+          grep -q "View Exam Results" app.txt
+          echo "All tests passed successfully."
+
+      - name: Package
+        run: |
+          echo "=== PACKAGE STARTED ==="
+          mkdir -p package
+          tar -czf package/college-erp.tar.gz app.txt
+          echo "Application packaged successfully."
+
+      - name: Deploy
+        run: |
+          echo "=== DEPLOY STARTED ==="
+          mkdir -p deployment
+          cp package/college-erp.tar.gz deployment/
+          echo "Application deployed successfully."
+
+      - name: CI/CD Success
+        run: |
+          echo "======================================"
+          echo "     COLLEGE ERP CI/CD SUCCESS"
+          echo "======================================"
