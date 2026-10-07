@@ -1,0 +1,11 @@
+College ERP Application
+
+Features:
+1. Student Login
+2. View Attendance
+3. View Exam Results
+4. View Timetable
+5. Download Study Materials
+6. Upload Study Materials
+7. Receive Notifications
+8. Manage Student Records
