@@ -10,3 +10,4 @@ Features:
 7. Receive Notifications
 8. Manage Student Records
 Student Login feature completed
+View Attendance feature completed
