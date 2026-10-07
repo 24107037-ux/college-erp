@@ -9,3 +9,4 @@ Features:
 6. Upload Study Materials
 7. Receive Notifications
 8. Manage Student Records
+View Attendance feature completed
